@@ -25,7 +25,12 @@ class SwapElemetByPositios():
     Time Complexity: O(1), for using constant operations.
     Auxiliary Space: O(1), for using constant extra space.
     """
-    def swapElement(p_list,pos1,pos2):
-        
+    def swapElementTemp(p_list,pos1,pos2):
+        temp=p_list[pos1-1]
+        p_list[pos1-1]=p_list[pos2-1]
+        p_list[pos2-1]=temp
+        return p_list
+
 calling=SwapElemetByPositios
 print(calling.swapElement([25, 65, 21, 90], pos1 = 1, pos2 = 3))
+print(calling.swapElementTemp([25, 65, 21, 90], pos1 = 1, pos2 = 3))
